@@ -4,7 +4,7 @@ $(function() {
     let header = $("#header"),
      introH = $("#intro").innerHeight(),
      scrolloffset = $(window).scrollTop();
-
+     
 /* Fixed Header */
 checkScroll(scrolloffset);
 
