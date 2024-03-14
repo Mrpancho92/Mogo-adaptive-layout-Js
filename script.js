@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./Js/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/Js/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./Js/app.js":
-/*!*******************!*\
-  !*** ./Js/app.js ***!
-  \*******************/
+/***/ "./src/Js/app.js":
+/*!***********************!*\
+  !*** ./src/Js/app.js ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
