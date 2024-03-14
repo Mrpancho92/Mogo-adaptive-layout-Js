@@ -8,7 +8,7 @@ const ghPages = require('gulp-gh-pages');
 const dist = "./dist/";
 
 gulp.task("copy-html", () => {
-  return gulp.src("./index.html")
+  return gulp.src("./src/index.html")
               .pipe(gulp.dest(dist))
               .pipe(browsersync.stream());
 });
@@ -18,7 +18,7 @@ gulp.task('deploy', function() {
 });
 
 gulp.task("build-js", () => {
-  return gulp.src("./Js/app.js")
+  return gulp.src("./src/Js/app.js")
               .pipe(webpack({
                   mode: 'development',
                   output: {
@@ -50,7 +50,7 @@ gulp.task("build-js", () => {
 });
 
 gulp.task("copy-assets", () => {
-  return gulp.src("./assets/**/*.*")
+  return gulp.src("./src/assets/**/*.*")
               .pipe(gulp.dest(dist + "/assets"))
               .on("end", browsersync.reload);
 });
@@ -62,15 +62,15 @@ gulp.task("watch", () => {
   notify: true
   });
   
-  gulp.watch("./index.html", gulp.parallel("copy-html"));
-  gulp.watch("./assets/**/*.*", gulp.parallel("copy-assets"));
-  gulp.watch("./Js/**/*.js", gulp.parallel("build-js"));
+  gulp.watch("./src/index.html", gulp.parallel("copy-html"));
+  gulp.watch("./src/assets/**/*.*", gulp.parallel("copy-assets"));
+  gulp.watch("./src/Js/**/*.js", gulp.parallel("build-js"));
 });
 
 gulp.task("build", gulp.parallel("copy-html", "copy-assets", "build-js"));
 
 gulp.task("build-prod-js", () => {
-  return gulp.src("./Js/app.js")
+  return gulp.src("./src/Js/app.js")
               .pipe(webpack({
                   mode: 'production',
                   output: {
