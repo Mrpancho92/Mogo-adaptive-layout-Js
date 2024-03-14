@@ -338,7 +338,7 @@ hr {
 
 .section--map {
     padding: 40px 0;
-    background: #e6e6e6 url("../assets/images/map-bg.png") 
+    background: #e6e6e6 url("../images/map-bg.png") 
     center no-repeat;
     -webkit-background-size:cover;
     background-size: cover;
